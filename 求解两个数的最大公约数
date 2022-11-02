@@ -1,0 +1,50 @@
+# c
+//用两种方法实现求解两个数的最大公约数
+
+#include <stdio.h>
+
+//迭代法
+
+int GCD1(int a, int b)
+
+{
+
+while (a % b != 0)
+
+{
+
+int c = a % b;
+
+a = b;
+
+b = c;
+
+}
+
+return b;
+
+}
+
+//递归法
+
+int GCD2(int a, int b)
+
+{
+
+if (a % b != 0)
+
+{
+
+int c = a % b;
+
+a = b;
+
+b = c;
+
+GCD2(a, b);
+
+}
+
+return b;
+
+}
